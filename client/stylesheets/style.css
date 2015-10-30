@@ -7,3 +7,17 @@ body,html{
 	padding: 0;
 	margin: 0;
 }
+header{
+	width: 100%;
+	height: 5rem;
+	background-color: #C3B5C1;
+}
+.post{
+	height: 4rem;
+	background-color: #EAEEEB;
+	margin: 1% 0;
+}
+.domain{
+	color: #ACB2B2;
+	margin-left: 3%;
+}
