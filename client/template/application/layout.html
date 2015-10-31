@@ -1,8 +1,8 @@
 <template name="layout">
 	<header role="navigation">
 		<a href="{{pathFor 'postsList'}}">Microscope</a>
-		<a href="{{pathFor 'postSubmit'}}">新規投稿</a>
-		<span style="color:#149898;">「{{pageTitle}}」</span>
+		{{#if currentUser}}<a href="{{pathFor 'postSubmit'}}">新規投稿</a>{{/if}}
+		<span style="color:#C20401;">「{{pageTitle}}」</span>
 		{{> loginButtons}}
 	</header>
 	<div id="main">
