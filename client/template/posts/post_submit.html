@@ -1,10 +1,14 @@
 <template name="postSubmit">
 	<form>
+		<div class="form-group {{errorClass 'url'}}"></div>
 		<p>Your URL</p>
 		<input type="text" name="url" placeholder="Your URL" />
+		<span class="help-block">{{errorMessage 'url'}}</span>
 
+		<div class="form-group {{errorClass 'title'}}"></div>
 		<p>Title</p>
 		<input type="text" name="title" placeholder="Name your post">
+		<span class="help-block">{{errorMessage 'title'}}</span>
 
 		<p>Message</p>
 		<textarea name="message" cols="30" rows="10"></textarea>
