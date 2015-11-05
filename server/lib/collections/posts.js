@@ -1,5 +1,5 @@
 Meteor.methods({
-	post: function(postAttributes){
+	postInsert: function(postAttributes){
 		var user = Meteor.user(),
 		postWithSameLink = Posts.findOne({url: postAttributes.url});
 

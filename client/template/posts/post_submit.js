@@ -10,12 +10,15 @@ Template.postSubmit.events({
 			timestamp: time
 		}
 
-		Meteor.call('post',post,function(error,id){
+		Meteor.call('postInsert',post,function(error,result){
 			if(error){
-				return alert(error.reason);
+				return throwError(error.reason);
+			}
+			if(result.postExists){
+				throwError('This link has already been posted');
 			}
 		});
 
-		Router.go('postsList');
+		Router.go('postPage',{_id: result._id});
 	}
 });
