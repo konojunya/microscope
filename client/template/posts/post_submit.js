@@ -10,7 +10,7 @@ Template.postSubmit.events({
 			timestamp: time
 		}
 
-		Meteor.call('postInsert',post,function(error,result){
+		Meteor.call('post',post,function(error,result){
 			if(error){
 				return throwError(error.reason);
 			}
@@ -19,6 +19,6 @@ Template.postSubmit.events({
 			}
 		});
 
-		Router.go('postPage',{_id: result._id});
+		Router.go('postsList');
 	}
 });
