@@ -22,7 +22,7 @@ Meteor.methods({
 			userId: user._id
 		});
 
-		if(! this.isSimulation){
+		if(!this.isSimulation){
 			var Future = Npm.require('fibers/future');
 			var future = new Future();
 			Meteor.setTimeout(function(){
