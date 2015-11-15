@@ -19,7 +19,8 @@ Meteor.methods({
 		//pick out the whitelisted keys
 		var post = _.extend(_.pick(postAttributes,'url','title','message','timestamp'),{
 			title: postAttributes.title + (this.isSimulation?'(client)':'(server)'),
-			userId: user._id
+			userId: user._id,
+			author: Meteor.user().profile.name
 		});
 
 		if(!this.isSimulation){
